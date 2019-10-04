@@ -1,7 +1,5 @@
-@CHARSET "UTF-8";
-
 body {
-	background-color: #AA7439;
+	background-color: #D09B61;
 
 }
 
@@ -14,5 +12,21 @@ h2 {
 }
 
 ul {
-    color: #150A4F;
+    color: #5C6D7A;
 }
+
+nav a {
+	color: #FFFFFF;
+	color: rgba(255,255,255, 0.3);
+}
+
+.byline {
+	color: #ac39fe;
+	color: rgba(172, 57, 254, 0.5)
+}
+
+#page-copyright {
+    color: #FFFFFF;
+	color: rgba(255,255,255,1)
+}
+
