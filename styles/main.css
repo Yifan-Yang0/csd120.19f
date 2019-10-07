@@ -15,6 +15,10 @@ ul {
     color: #5C6D7A;
 }
 
+a {
+	color: #ad4409;
+}
+
 nav a {
 	color: #FFFFFF;
 	color: rgba(255,255,255, 0.3);
