@@ -1,33 +1,20 @@
 body {
 	background-color: #D09B61;
 	font-family: 'Open Sans', sans-serif;
-	font-family: 'Roboto', sans-serif;
-	font-family: 'Lato', sans-serif;
-	font-family: 'Montserrat', sans-serif;
-	font-family: 'Raleway', sans-serif;
-
 }
 
 h1 {
 	color: #FFFFFF;
 	background-image: url("../images/background image.jpg");
 	background-repeat: repeat-x;
-	font-family: 'Open Sans', sans-serif;
 	font-family: 'Roboto', sans-serif;
-	font-family: 'Lato', sans-serif;
-	font-family: 'Montserrat', sans-serif;
-	font-family: 'Raleway', sans-serif;
 }
 
 h2 {
 	color: #722900;
 	background-image: url("../images/gradient.png");
 	background-repeat: repeat-x;
-	font-family: 'Open Sans', sans-serif;
 	font-family: 'Roboto', sans-serif;
-	font-family: 'Lato', sans-serif;
-	font-family: 'Montserrat', sans-serif;
-	font-family: 'Raleway', sans-serif;
 }
 
 ul {
@@ -44,15 +31,23 @@ nav a {
 	text-decoration-line: none;
 }
 
+header nav ul {
+	list-style-type: none;
+}
+
+ul {
+	list-style-type: circle;
+}
+
 .byline {
 	color: #ac39fe;
-	color: rgba(172, 57, 254, 0.5)
-	font-size:70%;
+	color: rgba(172, 57, 254, 0.5);
+	font-size: 70%;
 }
 
 #page-copyright {
     color: #FFFFFF;
-	color: rgba(255,255,255,1)
+	color: rgba(255,255,255,1);
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
