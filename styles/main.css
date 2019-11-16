@@ -7,9 +7,6 @@ body {
 h1 {
 	color: transparent;
 	background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,221,175,1) 2%, rgba(0,212,255,1) 100%);  
-    -webkit-background-clip: text;
-    -ms-background-clip: text;
-    background-clip: text;
 	font-family: 'Roboto', sans-serif;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
@@ -17,11 +14,16 @@ h1 {
 h2 {
 	color: transparent;
 	background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,221,175,1) 2%, rgba(0,212,255,1) 100%);  
-    -webkit-background-clip: text;
-    -ms-background-clip: text;
-    background-clip: text;
+
 	font-family: 'Roboto', sans-serif;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+header {
+	border-top: 4px solid rgba(0,0,0,0.1);
+	margin-left: -2em;
+	margin-right: -2em;
+
 }
 
 ul {
@@ -32,9 +34,16 @@ a {
 	color: #ad4409;
 }
 
+header nav {
+	margin-left: -2em;
+	margin-right: -2em;
+	border-bottom: 1px dotted rgba(0,0,0,0.3);
+	margin-top: -4px;
+}
+
 nav a {
 	color: #FFFFFF;
-	color: rgba(255,255,255, 0.3);
+	color: rgba(0,0,0, 1);
 	text-decoration-line: none;
 }
 
@@ -42,6 +51,25 @@ header nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding:0;
+	float: right;
+	
+
+}
+
+header nav ul li a {
+	float: left;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	margin-left: 1em;
+	margin-right: 1em;
+	display: block;
+	border: 4px solid transparent;
+
+}
+
+header nav ul li a:hover {
+	color: yellow;
+	border-top: 4px solid;
 }
 
 ul {
@@ -97,14 +125,23 @@ footer {
     background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,221,175,1) 2%, rgba(0,212,255,1) 100%);  
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    box-sizing: border-box;
 }
 
 .mugshot {
-	border-radius: 3px rgba(255,255,255,0.5);
+	border-radius: 3px;
+	border-radius: rgba(255,255,255,0.5);
+	float: right;
+	position: relative;
+	top: 1em;
 }
 
 .mugshot img {
     box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    width: 150px; /* Set a small width */
 }
 
 footer hr {
@@ -118,4 +155,29 @@ footer hr {
     border-right: none;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+div .paperclip {
+	background-image: url('../images/paperclip.png');
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+	position: relative;
+	right: 7px;
+	top: 10px;
+}
+
+.three {
+	clear: both;
+}
+
+.back-to-top {
+	text-align: right;
+	margin-right: -0.5em;
+	opacity: 50%;
+	margin-bottom: 3.5em;
+}
+
+.back-to-top:hover{
+	opacity: 100%;
 }
