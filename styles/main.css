@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 body {
 	background-color: #D09B61;
 	font-family: 'Open Sans', sans-serif;
@@ -32,19 +34,21 @@ ul {
 
 a {
 	color: #ad4409;
+    text-decoration-line: none;
 }
 
 header nav {
-	margin-left: -2em;
-	margin-right: -2em;
+	margin-left: 2em;
+	margin-right: 2em;
 	border-bottom: 1px dotted rgba(0,0,0,0.3);
 	margin-top: -4px;
+
+    overflow: auto;
 }
 
 nav a {
 	color: #FFFFFF;
 	color: rgba(0,0,0, 1);
-	text-decoration-line: none;
 }
 
 header nav ul {
@@ -52,12 +56,13 @@ header nav ul {
 	margin: 0;
 	padding:0;
 	float: right;
-	
+}
 
+header nav ul li {
+    float: left;
 }
 
 header nav ul li a {
-	float: left;
 	padding-top: 1em;
 	padding-bottom: 0.5em;
 	margin-left: 1em;
@@ -125,7 +130,6 @@ footer {
     background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,221,175,1) 2%, rgba(0,212,255,1) 100%);  
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
-    box-sizing: border-box;
 }
 
 .mugshot {
@@ -133,7 +137,7 @@ footer {
 	border-radius: rgba(255,255,255,0.5);
 	float: right;
 	position: relative;
-	top: 1em;
+	top: -1em;
 }
 
 .mugshot img {
@@ -157,14 +161,14 @@ footer hr {
     border-top-right-radius: 8px;
 }
 
-div .paperclip {
+.mugshot .paperclip {
 	background-image: url('../images/paperclip.png');
 	width: 50px;
 	height: 50px;
 	background-size: contain;
-	position: relative;
-	right: 7px;
-	top: 10px;
+	position: absolute;
+	right: -7px;
+	top: -10px;
 }
 
 .three {
@@ -174,8 +178,12 @@ div .paperclip {
 .back-to-top {
 	text-align: right;
 	margin-right: -0.5em;
-	opacity: 50%;
-	margin-bottom: 3.5em;
+	opacity: 0.5;
+}
+
+.back-to-top a {
+    position: fixed;
+    bottom: 3.5em;
 }
 
 .back-to-top:hover{
