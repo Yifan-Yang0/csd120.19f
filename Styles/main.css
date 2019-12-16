@@ -205,19 +205,51 @@ footer hr {
 }
 
 table {
-	background-color: rgba(0,0,0,1) opacity 0.05 ;
-	padding: 0.3em 1em 0.3em 1em;
-	border-left: 3px solid;
-	border-right: 3px solid;
+    border-collapse: collapse;
+}
 
+td, th {
+    background-color: rgba(0,0,0,0.05);
+    padding: 0.3em 1em 0.3em 1em;
+    border-left: 3px solid;
+    border-right: 3px solid;
 }
 
 table th {
-	background-color: rgba(0,0,0,1) opacity 0.1;
+	background-color: rgba(0,0,0,0.1);
+}
 
+table tr:nth-child(odd) td {
+    background-color: rgba(0,0,0,0.1);
+}
+
+table tr:nth-child(2) td,
+table tr:nth-child(2) th,
+table tr:nth-child(7) td,
+table tr:nth-child(7) th {
+    border-top: 3px solid;
 }
 
 .survey {
 	display: grid;
 	grid-column: span 2;
+}
+
+.survey form {
+    display: grid;
+}
+
+.survey form label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.survey [type="submit"] {
+    margin-top: 1em;
+    justify-self: end;
+    font-size: 24px;
+    padding: 1em 2em;
+}
+#burger-toggle {
+    display: none;
 }

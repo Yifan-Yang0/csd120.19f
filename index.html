@@ -17,6 +17,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato%7CMontserrat%7COpen+Sans%7CRaleway%7CRoboto&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="baguetteBox/baguetteBox.css">
+    <script src="baguetteBox/baguetteBox.js"></script>
+
+
     <title>
         Yifan Yang's CSD120 Website
     </title>
@@ -25,9 +29,8 @@
     <div class="width-wrap">
     <header id="top">
         <nav>
-            <div class="burger">
-
-            </div>
+            <input type="checkbox" id="burger-toggle">
+            <label for="burger-toggle" class="burger"></label>
             <ul class="nlist">
                 <li>
                     <a href="index.html">Home</a>
@@ -79,7 +82,7 @@
             <h2>
                 My Sault College Courses
             </h2>
-            <table border="1" >
+            <table >
                 <tr>
                     <th>
                         Term
@@ -94,7 +97,7 @@
                 <tr>
                     <th rowspan="5">
                         Fall
-                    </th>
+                    </th> 
                     <td>
                         CSD105
                     </td>
@@ -184,7 +187,7 @@
             <h2>
                 Photo Gallery
             </h2>
-            <div class="gallery-thumbails">
+            <div class="gallery-thumbnails">
                 <a href="https://picsum.photos/id/10/1024">
                     <img src="https://picsum.photos/id/10/300" alt="Placeholder Image">
 </a>
@@ -196,41 +199,27 @@
             <h2>
                 Survey
             </h2>
-            <form>
-                <label>
+            <form action="?" method="post">
+                <label for="name">
                     What is your name?
                 </label>
-                <br><br>
-                <input type="text" name="" required="">
-            </form>
-            <form>
-                <label>
+                <input id="name" type="text" name="name_field" required="">
+                <label for="email">
                     What is your email?
                 </label>
-                <br><br>
-                <input type="text" name="email" id="email">
-            </form>
-            <form>
-                <label>
+                <input type="email" name="email_field" id="email" required>
+                <label for="int">
                     Which integer is best?
                 </label>
-                <br><br>
-                <input type="number" name="best_integer">
-            </form>
-            <form>
-                <label>
+                <input id="int" type="number" name="best_integer">
+                <label for="day">
                     Which day is the best
                 </label>
-                <br><br>
-                <input type="date" name="best_day">
-            </form>
-            <form>
-                <label>
+                <input id="day" type="date" name="best_day">
+                <label for="bear">
                     Which bear is best?
                 </label>
-                <br><br>
-                <input type="" name="" list="bear">
-                <datalist id="bear">
+                <select id="bear" name="best_bear">
                     <option>blank</option>
                     <option>black</option>
                     <option>brown</option>
@@ -238,7 +227,25 @@
                     <option>panda</option>
                     <option>poalr</option>
                     <option>teddy</option>
-                </datalist>
+                </select>
+
+                <label>Do you like radio buttons?</label>
+                <label>
+                    <input type="radio" name="likes_radio_buttons" value="yes">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="likes_radio_buttons" value="no">
+                    No
+                </label>
+                <label>
+                    <input type="radio" name="likes_radio_buttons" value="?" checked>
+                    None of your business
+                </label>
+
+                <label for="life_meaning">What is the meaning of life?</label>
+                <textarea name="life_meaning" id="life_meaning" cols="30" rows="10" placeholder="Enter the correct answer here"></textarea>
+                <button type="submit">SEND</button>
             </form>
         </section>
     </main>
@@ -253,15 +260,21 @@
         <figure>
             <img src="images/sc-logos/sc-logo.png">
             <figcaption>
-            logo of saultcollege
+            logo of saultcollege 
             </figcaption>
         </figure>
-
+        
     </footer>
 <div class="back-to-top">
    <a href="#top">◤</a>
 </div>
 
 </div>
+
+    <script>
+        baguetteBox.run('.gallery-thumbnails', { 
+            filter: /picsum\.photos\/id/i 
+        });
+    </script>
 </body>
 </html>

@@ -33,7 +33,14 @@
 		border: none;
 	}
 
+	header nav ul {
+	    height: 0;
+        overflow: hidden;
+        transition: height 500ms ease-in-out;
+	}
+
 	.burger {
+		display: block;
 		width: 40px;
 		height: 25px;
 		margin-left: auto;
@@ -41,12 +48,44 @@
 		border-top: 5px solid;
 		margin-top: 1em;
 		cursor: pointer;
+		position: relative;
+
+		transition: transform 200ms ease-in-out;
 	}
 
-}
+	.burger::before {
+		content: "";
+		display: block;
+		width: 100%;
+		border-top: 5px solid;
+		position: absolute;
+		top: 5px;
 
-@media only screen and (min-width: 768px) {
-	.burger {
-		display: none;
+		transition: opacity 200ms ease-in-out;
 	}
+
+	.burger::after {
+		content: "";
+		display: block;
+		width: 100%;
+		border-top: 5px solid;
+		position: absolute;
+		top: 15px;
+		transition: transform 200ms ease-in-out;
+	}
+
+    #burger-toggle:checked ~ ul {
+        height: 160px;
+    }
+
+    #burger-toggle:checked ~ .burger {
+        transform: translate(-5px, 10px) rotate(45deg);
+    }
+    #burger-toggle:checked ~ .burger::before {
+        opacity: 0;
+    }
+    #burger-toggle:checked ~ .burger::after {
+        transform: translateY(-20px) rotate(-90deg);
+    }
+
 }
