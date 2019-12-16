@@ -4,6 +4,8 @@ body {
 	background-color: #D09B61;
 	font-family: 'Open Sans', sans-serif;
 
+    display: flex;
+    min-height: 100vh;
 }
 
 h1 {
@@ -110,6 +112,12 @@ figcaption {
 	color: #ffffff;
 }
 
+.bio,
+.glossary,
+#useful-links {
+    grid-column: span 2;
+}
+
 .bio p {
 	text-indent: 3em;
 }
@@ -118,6 +126,7 @@ footer {
 	text-align: center;
 	font-size: 12px;
 	margin-bottom: 2em;
+    margin-top: auto;
 }
 
 .width-wrap {
@@ -135,11 +144,14 @@ footer {
     background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(200,221,175,1) 2%, rgba(0,212,255,1) 100%);
     box-shadow: 0 0 4px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .grid {
 	display: grid;
-	grid-template-columns: span 2 220px;
+	grid-template-columns: 1fr 1fr;
 
 	column-gap: 2em;
 }
@@ -204,5 +216,23 @@ footer hr {
 
 .gallery {
 	grid-column: span 2;
+    width: 100%;
+}
 
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.gallery-thumbnails img {
+    width: 100%;
+    display: block;
+}
+
+.row-span-2 {
+    grid-row: span 2;
+}
+
+.col-span-2 {
+    grid-column: span 2;
 }
