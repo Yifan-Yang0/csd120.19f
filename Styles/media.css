@@ -16,6 +16,11 @@
 		display: block;
 	}
 
+	.row-span-2.col-span-2 {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+
 	.width-wrap {
 		display: grid;
 		grid-column: 1;
@@ -28,6 +33,13 @@
 		text-align: center;
 	}
 
+	header nav ul {
+		flex-direction: column;
+	}
+
+	header nav ul li a {
+		border: none;
+	}
 	header nav ul li a:hover {
 		text-decoration: underline;
 		border: none;
@@ -38,9 +50,27 @@
 		height: 25px;
 		margin-left: auto;
 		margin-right: auto;
-		border-top: 5px solid;
+		border-top: 5px solid black;
 		margin-top: 1em;
 		cursor: pointer;
+		position: relative;
+	}
+
+	.burger::before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		border-top: 5px solid black;
+		display: block;
+		width: 100%;
+	}
+	.burger::after {
+		content: "";
+		position: absolute;
+		top: 15px;
+		border-top: 5px solid black;
+		display: block;
+		width: 100%;
 	}
 
 }
