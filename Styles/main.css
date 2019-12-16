@@ -63,9 +63,6 @@ header nav ul {
 
 }
 
-header nav ul li {
-
-}
 
 header nav ul li a {
 	padding-top: 1em;
@@ -206,3 +203,4 @@ footer hr {
 	grid-column: span 2;
 
 }
+
